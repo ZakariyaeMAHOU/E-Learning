@@ -41,7 +41,7 @@
             lastChildFN.textContent = "The name is too short";
             return false;
         } else {
-            firstName.style.border = "2px solid rgb(116, 0, 148)";
+            firstName.style.border = "2px solid var(--main-color)";
             firstChildFN.textContent = "";
             return true;
         }
@@ -69,7 +69,7 @@
             lastChildLN.textContent = "The name is too short";
             return false;
         } else {
-            lastName.style.border = "2px solid rgb(116, 0, 148)";
+            lastName.style.border = "2px solid var(--main-color)";
             firstChildLN.textContent = "";
             return true;
         }
@@ -120,7 +120,7 @@
         }
         else {
             firstChildBD.textContent = "";
-            day.style.border = "2px solid rgb(116, 0, 148)";
+            day.style.border = "2px solid var(--main-color)";
             return true;
         }
     }
@@ -153,12 +153,12 @@
             firstChildPN.classList.add("emptyField");
             firstChildPN.textContent = "X";
             firstChildPN.style.color = "red";
-            lastChildLPN.textContent = "The phone number is invalid.";
+            lastChildLPN.textContent = "Incorrect format. Use this pattern: 612-345678.";
             phoneNumber.style.border = "2px solid red";
             return false;
         } else {
             firstChildPN.textContent = "";
-            phoneNumber.style.border = "2px solid rgb(116, 0, 148)";
+            phoneNumber.style.border = "2px solid var(--main-color)";
             return true;
         }
     }
@@ -189,7 +189,7 @@
             return false;
         } else {
             firstChildE.textContent = "";
-            email.style.border = "2px solid rgb(116, 0, 148)";
+            email.style.border = "2px solid var(--main-color)";
             return true;
         }
     }
@@ -220,7 +220,7 @@
             return false;
         } else {
             firstChildP.textContent = "";
-            password.style.border = "2px solid rgb(116, 0, 148)";
+            password.style.border = "2px solid var(--main-color)";
             return true;
         }
     }
@@ -251,13 +251,13 @@
             return false;
         } else {
             firstChildCP.textContent = "";
-            confirmPassword.style.border = "2px solid rgb(116, 0, 148)";
+            confirmPassword.style.border = "2px solid var(--main-color)";
             return true;
         }
     }
     // stop send false or empty informations
     let errMsg = document.createElement("p");
-errMsg.textContent = "Check fields.";
+    errMsg.textContent = "Check fields.";
     document.querySelector('form').addEventListener('submit', checkInformation);
     function checkInformation(e) {
             e.preventDefault();
