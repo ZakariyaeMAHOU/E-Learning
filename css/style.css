@@ -28,7 +28,7 @@ body {
         rgb(134, 21, 255),
         rgb(178, 134, 255));
     background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    animation: gradientAnimation 10s ease-in infinite;
 }
 
 /* Start Background Animation */
@@ -57,7 +57,7 @@ body {
     border-radius: 50px;
     border: 2px solid var(--main-color);
     bottom: -100px;
-    animation: animate 15s infinite ease-in;
+    animation: animate 10s infinite ease-in;
 }
 .circle span {
     position: absolute;
@@ -107,16 +107,15 @@ body {
 }
 @keyframes animate {
     0% {
-        bottom: -100px;
+        bottom: -70px;
         transform: translateX(0);
     }
     50% {
-        bottom: -100px;
-        transform: translateX(150);
+        transform: translateX(150px);
     }
     100% {
-        bottom: 1000px;
-        transform: translateX(-200);
+        bottom: 900px;
+        transform: translateX(-200px);
     }
 }
 /* End Background Animation  */
